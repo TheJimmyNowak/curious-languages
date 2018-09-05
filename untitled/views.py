@@ -5,5 +5,5 @@ from django.shortcuts import render
 def home(request):
     return render(request, '../templates/home/home.html',
     {
-        'userIsLogged': '0'
+        'userIsLogged': False
     })
