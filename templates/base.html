@@ -13,12 +13,12 @@
 <header>
     <nav class="navbar navbar-dark bg-dark">
     {% if userIsLogged %}
-        <div class="btn default">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="button" href="/login">Moje konto</button>
-        </div>
+        <a class="btn btn-outline-success my-2 my-sm-0" role="button" href="/accounts/logout">Wyloguj się</a>
+        <a class="btn btn-outline-success my-2 my-sm-0" role="button" href="/">Moje Konto</a>
+
     {% else %}
-        <a class="btn btn-outline-success my-2 my-sm-0" role="button" href="/login">Zaloguj się</a>
-        <a class="btn btn-outline-success my-2 my-sm-0" role="button" href="/login">Zarestruj się</a>
+        <a class="btn btn-outline-success my-2 my-sm-0" role="button" href="/accounts/login">Zaloguj się</a>
+        <a class="btn btn-outline-success my-2 my-sm-0" role="button" href="/accounts/register">Zarestruj się</a>
     {% endif %}
     </nav>
 </header>
