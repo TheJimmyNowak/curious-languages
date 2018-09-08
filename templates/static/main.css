@@ -13,31 +13,11 @@ body
     margin: 0px;
     background-color: rgba(180, 252, 217, 0.52);
 }
-#nameBar
+.languageButton
 {
-    background-color: rgba(122, 185, 128, 0.44);
-    font-size: 30px;
-    padding: 40px;
-    box-sizing: border-box;
-}
-.button
-{
-    border-radius: 20px;
-    background-color: rgb(41, 158, 94);
-    float: right;
-    font-size: 20px;
-    padding:10px;
-}
-.button:hover
-{
-    border-radius: 20px;
-    background-color: rgb(30, 107, 56);
-    float: right;
-    font-size: 20px;
-    padding:10px;
-    transform: scale(0.9);
-}
-.button>a
-{
-    text-decoration: none;
+    min-width: 100px;
+    min-height: 100px;
+    background-color: rgba(75,75,75,0.77);
+    float: left;
+    margin: 10px;
 }

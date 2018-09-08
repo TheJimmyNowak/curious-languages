@@ -1,7 +1,18 @@
 {%  extends 'base.html' %}
 {% block head %}
-<title>Home</title>
+    <title>Home</title>
 {% endblock %}
 {% block body %}
-Dupaa
+    {% if userIsLogged %}
+        <h3>Witaj {{ request.user.username }}</h3>
+        <div class="col-12 col-md-3 languageButton">
+            angielski
+        </div>
+        <div class="col-12 col-md-3 languageButton">
+            niemiecki
+        </div>
+        <div class="col-12 col-md-3 languageButton">
+            twoja stara
+        </div>
+    {% endif %}
 {% endblock %}

@@ -20,6 +20,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'accounts',
+    'lessons',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -118,4 +119,4 @@ STATICFILES_DIRS = (
 )
 
 LOGIN_REDIRECT_URL = views.home
-
+LOGOUT_REDIRECT_URL = views.home
