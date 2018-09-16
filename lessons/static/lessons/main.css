@@ -1,0 +1,15 @@
+main
+{
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+}
+h1
+{
+    font-size: 30px;
+}
+body
+{
+    margin: 0px;
+    background-color: rgba(180, 252, 217, 0.52);
+}

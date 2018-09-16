@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block body %}
+    {% if user.is_authenticated %}
+        {% for course in Courses %}
+            {% if course.courseId == 3 %}
+                <div style="clear: both"></div>
+            {% endif %}
+                <a class = "btn col s6" style="float: left" href="{{ course.courseId }}">{{ course.languageName }}</a>
+
+        {% endfor %}
+        <a class="btn col s6" style="float: left">...</a>
+    {% endif %}
+{% endblock %}
