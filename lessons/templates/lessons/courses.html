@@ -5,9 +5,8 @@
             {% if course.courseId == 3 %}
                 <div style="clear: both"></div>
             {% endif %}
-                <a class = "btn col s6" style="float: left" href="{{ course.courseId }}">{{ course.languageName }}</a>
-
-        {% endfor %}
+                <a class = "btn col s6" style="float: left" href="course-{{ course.course_id }}">{{ course.languageName }}</a>
+            {% endfor %}
         <a class="btn col s6" style="float: left">...</a>
     {% endif %}
 {% endblock %}

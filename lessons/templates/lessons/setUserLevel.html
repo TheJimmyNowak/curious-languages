@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Ustaw swój poziom</title>
+    <script>
+        $(document).ready(function(){
+            $('select').formSelect();
+          });
+    </script>
+{% endblock %}
+
+{% block body %}
+    <h1>{{ course.languageName }}</h1>
+    <b><p>Po raz pierwszy wchodzisz do tego kursu ustaw swój poziom zaawansowania:</p></b>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <br>
+
+        <button class="btn" type="submit">Już :D</button>
+    </form>
+
+{% endblock %}

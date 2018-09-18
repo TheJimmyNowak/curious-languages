@@ -14,7 +14,7 @@ SECRET_KEY = 'uc6h37%x(+v!i-5ml09m013hd8mb64unmynu-=s!fh18^#3#28'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -69,10 +69,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'languageApp',
-        'USER':'debian-sys-maint',
-        'PASSWORD':'swG2vc4BrXjLydEh',
-        'HOST':'localhost',
-        'PORT':''
+        'USER': 'debian-sys-maint',
+        'PASSWORD': 'swG2vc4BrXjLydEh',
+        'HOST': 'localhost',
+        'PORT': ''
     }
 }
 
@@ -116,7 +116,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, '/')
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "templates/../lessons/static"),
+    os.path.join(BASE_DIR, "templates/../lessons/../static"),
 )
 
 LOGIN_REDIRECT_URL = views.home

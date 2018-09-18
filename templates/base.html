@@ -3,30 +3,32 @@
 <head>
     <meta charset="UTF-8">
     {% load static %}
-    <link rel="stylesheet" href="{% static 'lessons/main.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'main.css' %}" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="{% static 'jquery-3.3.1.min.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     {% block head %}
     <title>Title</title>
     {% endblock %}
 </head>
 <body>
-<header>
-    <nav class="navbar">
-    {% if request.user.is_authenticated %}
-        <a class="btn btn-outline-success my-2 my-sm-0" role="button" href="/accounts/logout">Wyloguj się</a>
-        <a class="btn btn-outline-success my-2 my-sm-0" role="button" href="/">Moje Konto</a>
+    <header>
+        <nav class="navbar">
+        {% if request.user.is_authenticated %}
+            <a class="btn btn-outline-success my-2 my-sm-0" role="button" href="/accounts/logout">Wyloguj się</a>
+            <a class="btn btn-outline-success my-2 my-sm-0" role="button" href="/accounts/profile">Moje Konto</a>
 
-    {% else %}
-        <a class="btn btn-outline-success my-2 my-sm-0" role="button" href="/accounts/login">Zaloguj się</a>
-        <a class="btn btn-outline-success my-2 my-sm-0" role="button" href="/accounts/register">Zarestruj się</a>
-    {% endif %}
-    </nav>
-</header>
-<main>
-    <div class="container row col s12" style="">
-        {% block body %}
-        {% endblock %}
-    </div>
-</main>
+        {% else %}
+            <a class="btn btn-outline-success my-2 my-sm-0" role="button" href="/accounts/login">Zaloguj się</a>
+            <a class="btn btn-outline-success my-2 my-sm-0" role="button" href="/accounts/register">Zarestruj się</a>
+        {% endif %}
+        </nav>
+    </header>
+    <main>
+        <div class="container row col s12" style="">
+            {% block body %}
+            {% endblock %}
+        </div>
+    </main>
 </body>
 </html>

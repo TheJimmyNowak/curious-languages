@@ -8,5 +8,3 @@ def home(request):
         args['userIsLogged'] = True
 
     return redirect('/lessons')
-
-

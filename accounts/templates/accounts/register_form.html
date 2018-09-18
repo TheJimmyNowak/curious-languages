@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+     {% load static %}
+    <link rel="stylesheet" href="{% static 'lessons/../../../static/main.css' %}" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <meta charset="UTF-8">
+    <title>Rejestracja</title>
+</head>
+<body>
+    <div class="container">
+        <b>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="btn" type="submit">Stwórz</button>
+            </form>
+        </b>
+    </div>
+</body>
+</html>
