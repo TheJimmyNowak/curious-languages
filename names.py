@@ -17,3 +17,6 @@ class Lessons:
     Beginner = 'Początkujący'
     Intermediate = 'Średnio zaawansowany'
     Advanced = 'Zaawansowany'
+
+    #Dictionary
+    Language = 'Polski'

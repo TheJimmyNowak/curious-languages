@@ -1,12 +1,22 @@
 {% extends 'base.html' %}
+{% block head %}
+    {% load has_group %}
+{% endblock %}
 {% block body %}
+
     {% if user.is_authenticated %}
+        {% if request.user|has_group:"teacher" %}
+            <p>Jesteś nauczycielem</p>
+            <a class="btn col s12" href="/add/lesson">Dodaj lekcję</a>
+        {% endif %}
         {% for course in Courses %}
+
             {% if course.courseId == 3 %}
                 <div style="clear: both"></div>
             {% endif %}
                 <a class = "btn col s6" style="float: left" href="course-{{ course.course_id }}">{{ course.languageName }}</a>
-            {% endfor %}
+        {% endfor %}
+
         <a class="btn col s6" style="float: left">...</a>
     {% endif %}
 {% endblock %}

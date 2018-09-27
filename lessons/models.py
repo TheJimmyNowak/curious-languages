@@ -23,7 +23,7 @@ class Lessons (models.Model):
 
 
 class WordsDictionary (models.Model):
-    language = models.ForeignKey(to=Lessons, on_delete=models.CASCADE)
+    language = models.ForeignKey(to=Courses, on_delete=models.CASCADE)
     word = models.CharField(max_length=50, default='Error')
     websiteUserMeaning = models.CharField(max_length=50, default='Error')
     partOfSpeech = models.CharField(max_length=20, default='Error')
